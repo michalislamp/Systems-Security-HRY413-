@@ -20,11 +20,10 @@ Curve25519 elliptic curve for the ECDH key exchange. The program first generates
 
 ### Key Generation Process:
 
-1. **Step 1**:  
-   The user provides two prime numbers, `p` and `q`. With the `-g` argument, the program also takes the desired key length.
+`generateRSAKeyPair` function:
 
-2. **Step 2**:  
-   The program checks if the numbers are prime using the `mpz_probab_prime_p` function from the `gmp.h` library. If the function returns `2`, the number is considered prime. If the numbers are not prime, the program selects      another random number within the range.
+1. **Step 1 & 2**:  
+   The function generates two prime numbers, `p` and `q`. With the `-g` argument, takes the desired key length.
 
 3. **Step 3**:  
    Once valid primes are chosen, the program calculates `n` using the `mpz_mul` function.
