@@ -10,23 +10,11 @@ This `README.md` serves as a lab report for the first exercise, explaining the c
 
 ## Elliptic Curve Diffie-Hellman Key Exchange
 
-The ECDH Key Exchange is implemented as follows:
+The ECDH Key Exchange is implemented using libsodium library. The aim is to create a tool that
+enables secure key exchange between two parties (Alice and Bob). Alice and Bob agree to use the
+Curve25519 elliptic curve for the ECDH key exchange.
 
-1. **Initialization**:  
-   In the main program, all variables are initialized using the `mpz_init` function from the `gmp.h` library.
-   
-2. **Input Handling**:  
-   The program takes arguments from the user, using specific command-line commands to specify the input values.
-   
-3. **Calculation**:  
-   The program calculates the necessary equations for the ECDH method.
-
-4. **Output**:  
-   The result is written to a file, containing three numbers:
-   - **Public Key A**
-   - **Public Key B**
-   - **Shared Key**
-
+Then the program first generates for both of them Private and Public keys and then calculates the Shared Secret as defined by ECDH.
 ---
 
 ## RSA (Rivest–Shamir–Adleman) Algorithm
