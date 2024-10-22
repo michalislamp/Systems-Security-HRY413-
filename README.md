@@ -1,4 +1,4 @@
-# Lab Report: Diffie-Hellman Key Exchange and RSA Encryption/Decryption
+# Lab Report: Elliptic Curve Diffie-Hellman (ECDH) Key Exchange and RSA Encryption/Decryption
 
 **Authors:**  
 Michalis Lamprakis - 2020030077  
@@ -8,9 +8,9 @@ This `README.md` serves as a lab report for the first exercise, explaining the c
 
 ---
 
-## Diffie-Hellman Key Exchange
+## Elliptic Curve Diffie-Hellman Key Exchange
 
-The Diffie-Hellman Key Exchange is implemented as follows:
+The ECDH Key Exchange is implemented as follows:
 
 1. **Initialization**:  
    In the main program, all variables are initialized using the `mpz_init` function from the `gmp.h` library.
@@ -19,7 +19,7 @@ The Diffie-Hellman Key Exchange is implemented as follows:
    The program takes arguments from the user, using specific command-line commands to specify the input values.
    
 3. **Calculation**:  
-   The program calculates the necessary equations for the Diffie-Hellman method.
+   The program calculates the necessary equations for the ECDH method.
 
 4. **Output**:  
    The result is written to a file, containing three numbers:
@@ -37,7 +37,7 @@ The Diffie-Hellman Key Exchange is implemented as follows:
    The user provides two prime numbers, `p` and `q`. With the `-g` argument, the program also takes the desired key length.
 
 2. **Step 2**:  
-   The program checks if the numbers are prime using the `mpz_probab_prime_p` function from the `gmp.h` library. If the function returns `2`, the number is considered prime. If the numbers are not prime, the program selects another random number within the range.
+   The program checks if the numbers are prime using the `mpz_probab_prime_p` function from the `gmp.h` library. If the function returns `2`, the number is considered prime. If the numbers are not prime, the program selects      another random number within the range.
 
 3. **Step 3**:  
    Once valid primes are chosen, the program calculates `n` using the `mpz_mul` function.
@@ -72,18 +72,17 @@ The Diffie-Hellman Key Exchange is implemented as follows:
 
 ---
 
-## Time Comparison
+## Time & Memory Usage Comparison
 
 ### `-a` Argument
 
-The `-a` argument is used for time comparison and takes an output `.txt` file as an argument (specified by the user), where the time results (in seconds) are stored.
+The `-a` argument is used for time & memory usage comparison and the result is stored in a `.txt` file (specified by the user).
 
-1. The program generates new public and private keys for three different key lengths.
-2. Using the `clock` function from the library, it calculates the time taken for each function call.
-3. The functions used for this comparison are the same as those used in the encryption/decryption process, but with fixed arguments (for input, output, and key files).
+1. The program generates new public and private keys for three different key lengths (1024, 2048, 4096).
+2. Using the `clock` function (from the <sys/time.h> library) and (from <sys/resource.h>), calculates the time taken and the memory usage for each Encryption/Decryption.
 
 ---
 
 ### Conclusion
 
-This lab report details the implementation of two cryptographic algorithms: Diffie-Hellman and RSA. It explains the key generation, encryption, decryption processes, and time comparison between different key lengths in RSA encryption.
+This lab report details the implementation of two cryptographic algorithms: Elliptic Curve Diffie-Hellman and RSA. It explains the key generation, encryption, decryption processes, and time comparison between different key lengths in RSA encryption.
