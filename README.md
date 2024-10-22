@@ -22,22 +22,22 @@ Curve25519 elliptic curve for the ECDH key exchange. The program first generates
 
 `generateRSAKeyPair` function:
 
-1. **Step 1 & 2**:  
+**Step 1 & 2**:  
    The function generates two prime numbers, `p` and `q`. With the `-g` argument, takes the desired key length.
 
-3. **Step 3**:  
+**Step 3**:  
    Once valid primes are chosen, the program calculates `n` using the `mpz_mul` function.
 
-4. **Step 4**:  
+**Step 4**:  
    It calculates `λ(n)` using `mpz_sub_ui` and `mpz_mul` functions.
 
-5. **Step 5**:  
+**Step 5**:  
    The `e` value (public exponent) is initialized and calculated according to the equation using functions from the same library.
 
-6. **Step 6**:  
+**Step 6**:  
    The program calculates `d` (private exponent) using the `mpz_invert` function.
 
-7. **Step 7 & Step 8**:  
+**Step 7 & Step 8**:  
    Two key files are generated:
    - `public.key` (containing `n` and `e`)
    - `private.key` (containing `n` and `d`)
