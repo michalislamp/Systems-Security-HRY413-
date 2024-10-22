@@ -1,8 +1,8 @@
 # Lab Report: Diffie-Hellman Key Exchange and RSA Encryption/Decryption
 
 **Authors:**  
-Christina Chatzianagnostou - 2018030132  
-Fotios Valsamos - 2018030074
+Michalis Lamprakis - 2020030077  
+Christos Dimas     - 2021030183
 
 This `README.md` serves as a lab report for the first exercise, explaining the code implementation of two cryptographic algorithms: Diffie-Hellman Key Exchange and RSA (Rivest–Shamir–Adleman) encryption/decryption.
 
