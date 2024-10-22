@@ -16,6 +16,15 @@ Curve25519 elliptic curve for the ECDH key exchange. The program first generates
 
 ---
 
+## Command Line Options for ECDH Tool:
+
+- `-o path`:    Path to output file
+- `-a number`:  Alice's private key
+- `-b number`:  Bob's private key
+- `-h`:         Help message
+- 
+---
+
 ## RSA (Rivest–Shamir–Adleman) Algorithm
 
 ### Key Generation Process:
@@ -58,11 +67,9 @@ Curve25519 elliptic curve for the ECDH key exchange. The program first generates
 
 ---
 
-## Time & Memory Usage Comparison
+## Performance Analysis
 
-### `-a` Argument
-
-The `-a` argument is used for time & memory usage comparison and the result is stored in a `.txt` file (specified by the user).
+The `-a` argument is used for time & memory usage analysis and the result is stored in a `.txt` file (specified by the user).
 
 1. The program generates new public and private keys for three different key lengths (1024, 2048, 4096).
 2. Using the `clock` function (from the <sys/time.h> library) and (from <sys/resource.h>), calculates the time taken and the memory usage for each Encryption/Decryption.
