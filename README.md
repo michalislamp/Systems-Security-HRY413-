@@ -72,4 +72,4 @@ The `-a` argument is used for time & memory usage comparison and the result is s
 
 ### Conclusion
 
-This lab report details the implementation of two cryptographic algorithms: Elliptic Curve Diffie-Hellman and RSA. It explains the key generation, encryption, decryption processes, and time comparison between different key lengths in RSA encryption.
+This lab report details the implementation of two cryptographic algorithms: Elliptic Curve Diffie-Hellman and RSA. It also explains the key generation, encryption, decryption processes as well as time and memory comparison between different key lengths in RSA encryption.
