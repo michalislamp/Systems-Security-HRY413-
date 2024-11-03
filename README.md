@@ -56,14 +56,14 @@ This is an access control logging system developed in C, designed to track all f
 
 ## Makefile Commands
 
-- make: Builds the project.
-- make run: Runs the tester with the shared library preloaded.
-- make clean: Cleans object files, removes test files, and deletes the log file.
+- `make all`: Builds the project.
+- `make run`: Runs the tester with the shared library preloaded.
+- `make clean`: Cleans object files, removes test files, executable files, and deletes the log file.
 
 ## Running the System
 
-- **Build the system:** make all
-- **Update LogFile:** make run
-- **Identify & Print Information for Malicious Users:** ./acmonitor -m
-- **Identify & Print Information for Users Accessing a Specified File:** ./acmonitor -i [path to filename]
-- **Clear LogFile & Erase Executable Files:** make clean
+- **Build the system:** `make all`
+- **Update LogFile:** `make run`
+- **Identify & Print Information for Malicious Users:** `./acmonitor -m`
+- **Identify & Print Information for Users Accessing a Specified File:** `./acmonitor -i [path to filename]`
+- **Clear LogFile & Erase Executable Files:** `make clean`
