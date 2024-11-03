@@ -7,15 +7,18 @@
 
 ## Main Description
 
-Developed in C, this system logs file access and modifications initiated by user programs. Each operation is logged, allowing for security analysis and monitoring of file activities.
+This is an access control logging system developed in C, designed to track all file accesses and modifications triggered by a user's program. Each file operation generates an entry in a log file, which facilitates in-depth analysis by a privileged process. The log file, created in the same directory, captures key details for enhanced security monitoring, providing a concise yet effective solution for comprehensive file activity tracking.
+
 
 ## Modules Description
 
-- **logger.c**: Handles logging of all file operations by overriding `fopen` and `fwrite`, logging user actions, file hashes, and more.
-- **acmonitor.c**: Monitors log data to detect security breaches and unauthorized access attempts.
-- **test_aclog.c**: Tests the logging functionalities by simulating various file operations.
+## Modules
 
-## Testing the logger.so Shared Library
+- **logger.c**: Creates log files and overrides standard `fopen` and `fwrite` functions. This module collects data such as the user ID, date/time of the action, user permissions, and generates an SHA256 hash of the file content after each `fwrite` call, logging all information into `file_logging.log`.
+- **acmonitor.c**: Implements the monitoring tools that utilize the logged data to identify potential security breaches, including detecting malicious users—those attempting to access a file without the necessary permissions.
+- **test_aclog.c**: Contains tests to verify the functionalities of the logging and monitoring system, simulating various file operations to create scenarios for the tools to capture and analyze.
+
+## Testing 
 
 ### Test 1: Basic File Operations
 - **Objective**: Open and write names to `file_0` to `file_9`.
