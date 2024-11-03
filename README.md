@@ -10,8 +10,6 @@
 This is an access control logging system developed in C, designed to track all file accesses and modifications triggered by a user's program. Each file operation generates an entry in a log file, which facilitates in-depth analysis by a privileged process. The log file, created in the same directory, captures key details for enhanced security monitoring, providing a concise yet effective solution for comprehensive file activity tracking.
 
 
-## Modules Description
-
 ## Modules
 
 - **logger.c**: Creates log files and overrides standard `fopen` and `fwrite` functions. This module collects data such as the user ID, date/time of the action, user permissions, and generates an SHA256 hash of the file content after each `fwrite` call, logging all information into `file_logging.log`.
