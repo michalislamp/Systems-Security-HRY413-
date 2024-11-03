@@ -18,7 +18,7 @@ This is an access control logging system developed in C, designed to track all f
 - **acmonitor.c**: Implements the monitoring tools that utilize the logged data to identify potential security breaches, including detecting malicious users—those attempting to access a file without the necessary permissions.
 - **test_aclog.c**: Contains tests to verify the functionalities of the logging and monitoring system, simulating various file operations to create scenarios for the tools to capture and analyze.
 
-## Testing 
+## Testing Logger
 
 ### Test 1: Basic File Operations
 - **Objective**: Open and write names to `file_0` to `file_9`.
@@ -57,4 +57,13 @@ This is an access control logging system developed in C, designed to track all f
 - `make`: Builds the project.
 - `make run`: Runs the tester with the shared library preloaded.
 - `make clean`: Cleans object files, removes test files, and deletes the log file.
+
+## Running the System
+
+- **Build the system:** `make all`
+- **Update LogFile:** `make run`
+- **Identify & Print Information for Malicious Users:** `./acmonitor -m`
+- **Identify & Print Information for Users Accessing a Specified File:** `./acmonitor -i [path to filename]`
+- **Clear LogFile & Erase Executable Files:** `make clean`
+
 
